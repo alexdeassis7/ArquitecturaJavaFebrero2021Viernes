@@ -1,64 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-<!-- 
-  para crea este proyecto utilizar 
-  mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -->
-  <parent>
-    <artifactId>tutorial_maven</artifactId>
-    <groupId>org.educacionit</groupId>
-    <version>1.0</version>
-  </parent>
+	<!-- para crea este proyecto utilizar mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes 
+		-DarchetypeArtifactId=maven-archetype-quickstart -->
+	<parent>
+		<artifactId>tutorial_maven</artifactId>
+		<groupId>org.educacionit</groupId>
+		<version>1.0</version>
+	</parent>
 
-  <groupId>org.educacionit</groupId>
-  <artifactId>tutorial_maven_jar</artifactId>
-  <version>1.0</version>
-  <name>tutorial_maven_jar</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target> -->
-  </properties>
-<build>
-  <plugins>
-      <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                  <source>1.5</source>
-                  <target>1.5</target>
-            </configuration>
-      </plugin>
-  </plugins>
-</build>
-
-
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-    
-<dependency>
-    <groupId>log4j</groupId>
-    <artifactId>log4j</artifactId>
-    <version>1.2.9</version>
-</dependency>
-
-  </dependencies>
+	<groupId>org.educacionit</groupId>
+	<artifactId>tutorial_maven_jar</artifactId>
+	<version>1.0</version>
+	<name>tutorial_maven_jar</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- <maven.compiler.source>1.7</maven.compiler.source> <maven.compiler.target>1.7</maven.compiler.target> -->
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 
-<!-- Scopes de las dependencias 
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+<!-- 			utilizamos la variable del pom padre -->
+			<version>${log4j.version}</version>
+<!-- 			<optional>true</optional> -->
+		</dependency>
+	</dependencies>
 
-1 compile 
-2 provided
-3 runtime
-4 test 
-5 system
-6 import  -->
+
+	<!-- Scopes de las dependencias 1 compile 2 provided 3 runtime 4 test 5 
+		system 6 import -->
 </project>
